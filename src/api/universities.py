@@ -2,7 +2,7 @@ import json
 
 import httpx
 
-from schemas.schemas import University
+from src.schemas.schemas import University
 
 url = 'http://universities.hipolabs.com/search'
 

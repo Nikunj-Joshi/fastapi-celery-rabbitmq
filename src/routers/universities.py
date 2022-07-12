@@ -2,10 +2,10 @@ from celery import group
 from fastapi import APIRouter
 from starlette.responses import JSONResponse
 
-from api import universities
-from config.celery_utils import get_task_info
-from schemas.schemas import Country
-from celery_tasks.tasks import get_all_universities_task, get_university_task
+from src.celery_tasks.tasks import get_all_universities_task, get_university_task
+from src.api import universities
+from src.config.celery_utils import get_task_info
+from src.schemas.schemas import Country
 
 router = APIRouter(prefix='/universities', tags=['University'], responses={404: {"description": "Not found"}})
 

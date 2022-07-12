@@ -1,8 +1,7 @@
-import uvicorn as uvicorn
 from fastapi import FastAPI
 
-from config.celery_utils import create_celery
-from routers import universities
+from src.config.celery_utils import create_celery
+from src.routers import universities
 
 
 def create_app() -> FastAPI:
@@ -20,5 +19,6 @@ app = create_app()
 celery = app.celery_app
 
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", port=9000, reload=True)
+# if __name__ == "__main__":
+# import uvicorn as uvicorn
+#     uvicorn.run("main:app", port=9000, reload=True)
